@@ -1,0 +1,500 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Consigue una cotización</h2>
+
+            <ol class="breadcrumb">
+                <li>
+                    <a href="<%= url_for :controller => 'dashboard', :action => 'index' %>">Inicio</a>
+            </li>
+            <li class="active">
+               <strong><a>Consigue una cotización</a></strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" href="/assets/stylesheets/quote/quote.css">
+<!-- <link rel="stylesheet" type="text/css" href="/assets/stylesheets/quote/bootstrap-datepicker3.min.css"> -->
+<link rel="stylesheet" type="text/css" href="/assets/stylesheets/plugins.min.css">
+<div class="tab_container">
+	<input id="tab1" type="radio" name="tabs" checked>
+	<label for="tab1"><i class="fa fa-car"></i><span>Auto</span></label>
+
+	<input id="tab2" type="radio" name="tabs">
+	<label for="tab2"><i class="fa fa-pencil-square-o"></i><span>Viajar</span></label>
+
+	<input id="tab3" type="radio" name="tabs">
+	<label for="tab3"><i class="fa fa-home"></i><span>Casa</span></label>
+
+	<input id="tab4" type="radio" name="tabs">
+	<label for="tab4"><i class="fa fa-credit-card-alt"></i><span>RCP</span></label>
+
+	<input id="tab5" type="radio" name="tabs">
+	<label for="tab5"><i class="fa fa-heart"></i><span>SOAP</span></label>
+
+	<input id="tab6" type="radio" name="tabs">
+	<label for="tab6"><i class="fa fa-usd"></i><span>Vida</span></label>
+
+	<input id="tab7" type="radio" name="tabs">
+	<label for="tab7"><i class="fa fa-motorcycle"></i><span>Motocicleta</span></label>
+
+	<input id="tab8" type="radio" name="tabs">
+	<label for="tab8"><i class="fa fa-building"></i><span>Condominio</span></label>
+
+	<section id="content1" class="tab-content">
+		<center>
+			<form action="/getquote/productlist"   role="form" data-toggle="validator" class="quoteform">
+			<div class="form-row">
+			  <div class="form-group col-md-6">
+			    <label for="inputName">Nombre</label>
+			    <input type="name" class="form-control" id="inputName" placeholder="Name" required>
+			  </div>
+			  <div class="form-group col-md-6">
+			    <label for="firstname">Nombre de pila</label>
+			    <input type="text" class="form-control" id="firstname" placeholder="First Name" required>
+			  </div>
+			  <div class="form-group col-md-6">
+			    <label for="lastname">Apellido</label>
+			    <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+			  </div>
+			  <div class="form-group col-md-6">
+			    <label for="telnumber">Número de teléfono</label>
+			    <input type="text" class="form-control" id="telnumber" placeholder="111-2222-3333" required>
+			  </div>
+			  <div class="form-group col-md-6">
+			    <label for="inputEmail4">Email</label>
+			    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+			  </div>
+			  <div class="form-group col-md-6">
+			    <label for="inputAddress">Dirección</label>
+			    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+			  </div>
+			</div>
+			<div class="form-row">
+			  <div class="form-group col-md-4">
+			    <label for="brand">Marca de auto</label>
+			    <select id="brand" class="form-control" required>
+			      <option selected>Choose...</option>
+			      <option>...</option>
+			      <option value="1">ACADIAN</option>
+			      <option value="2">ACURA</option>
+			      <option value="3">ALFA ROMEO</option>
+			      <option value="4">ASIA MOTORS</option>
+			      <option value="5">AUDI</option>
+			      <option value="6">BAIC</option>
+			      <option value="7">BAW</option>
+			      <option value="8">BMW</option>
+			      <option value="9">BRILLIANCE</option>
+			      <option value="10">BYD</option>
+			    </select>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="carmodel">Modelo de coche</label>
+			    <select id="carmodel" class="form-control" required>
+			      <option selected>Choose...</option>
+			      <option>...</option>
+			    </select>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="registeryear">Año de registro</label>
+			    <input type="text" class="form-control" id="registeryear" required>
+			  </div>
+			</div>
+			<button type="submit" class="btn btn-info">Ir al paso 2</button>
+			</form>
+		</center>
+	</section>
+
+	<section id="content2" class="tab-content">
+		<center>
+			<form action="/getquote/productlist"   role="form" data-toggle="validator" class="quoteform">
+			<div class="form-row">
+			  <div class="form-group col-md-6">
+			    <label for="inputName">Nombre</label>
+			    <input type="name" class="form-control" id="inputName" placeholder="Name" required>
+			  </div>
+			  <div class="form-group col-md-6">
+			    <label for="memberscount">¿Cuántos miembros?</label>
+			    <select id="memberscount" class="form-control" required>
+			      <option selected>Choose...</option>
+			      <option>1</option>
+			      <option>2</option>
+			      <option>3</option>
+			      <option>4</option>
+			      <option>5</option>
+			      <option>6</option>
+			      <option>7</option>
+			      <option>8</option>
+			      <option>9</option>
+			      <option>10</option>
+			      <option>10+</option>
+			    </select>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="telnumber">Número de teléfono</label>
+			    <input type="text" class="form-control" id="telnumber" placeholder="111-2222-3333" required>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="inputEmail4">Email</label>
+			    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+			  </div>
+			  <div class="form-group col-md-4">
+			    <label for="ages">Ages</label>
+			    <input type="text" class="form-control" id="ages" placeholder="32, 43, 20" required>
+			  </div>
+			</div>
+			<ul class="destinations  col-xs-12 col-sm-12">
+			</ul>
+			<div class="form-row">
+			  <div class="form-group col-md-4">
+			    <label for="brand">Where to go?</label>
+			    <select id="brand" class="form-control travel-destination" required>
+			      <option value="-" selected>Choose...</option>
+			      <option value="-" >...</option>
+			      <option value="ASIA">ASIA</option>
+			      <option value="AFRICA">AFRICA</option>
+			      <option value="EUROPE">EUROPE</option>
+			      <option value="CHILE">CHILE</option>
+			      <option value="AUSTRALIA">AUSTRALIA</option>
+			    </select>
+			  </div>
+			  <div class="form-group col-md-8">
+			    <div class="input-daterange" id="datepicker">
+			      <div class="form-group col-md-6">
+			        <label for="from">Start Date</label>
+			        <input type="text" class="form-control" name="from" placeholder="From date" required>
+			      </div>
+			      <div class="form-group col-md-6">
+			        <label for="to">End Date</label>
+			        <input type="text" class="form-control" name="to" placeholder="To date" required>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<button type="submit" class="btn btn-info">Ir al paso 2</button>
+			</form>
+		</center>
+      
+	</section>
+
+	<section id="content3" class="tab-content">
+		<center>
+		  <form action="/getquote/productlist"   role="form" data-toggle="validator" class="quoteform">
+		    <div class="form-row">
+		      <div class="form-group col-md-6">
+		        <label for="inputName">Nombre</label>
+		        <input type="name" class="form-control" id="inputName" placeholder="Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="firstname">Nombre de pila</label>
+		        <input type="text" class="form-control" id="firstname" placeholder="First Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="lastname">Apellido</label>
+		        <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="telnumber">Número de teléfono</label>
+		        <input type="text" class="form-control" id="telnumber" placeholder="111-2222-3333" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputEmail4">Email</label>
+		        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputAddress">Dirección</label>
+		        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="brand">¿Qué tipo de propiedad es?</label>
+		        <select id="brand" class="form-control" required>
+		          <option value="-" selected>Choose...</option>
+		          <option value="House">House</option>
+		          <option value="Flat / Apartment">Flat / Apartment</option>
+		          <option value="Bungalow">Bungalow</option>
+		          <option value="Town house">Town house</option>
+		          <option value="Other">Other</option>
+		        </select>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="brand">¿Qué tipo de propiedad es?</label>
+		        <select id="brand" class="form-control" required>
+		          <option value="-" selected>Choose...</option>
+		          <option value="Semi-detached">Semi-detached</option>
+		          <option value="Detached">Detached</option>
+		          <option value="Link-detached">Link-detached</option>
+		          <option value="Terraced">Terraced</option>
+		          <option value="End terrace">End terrace</option>
+		        </select>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="brand">Aproximadamente cuando fue construido?</label>
+		        <select id="brand" class="form-control" required>
+		          <option value="-" selected>Choose...</option>
+		          <option value="-">Antiguedad del Inmueble</option>
+		          <option value="1">Entre 1953 – 1972</option>
+		          <option value="2">Entre 1973-1988</option>
+		          <option value="3">Entre 1989-1993</option>
+		          <option value="4">Entre 1994-2000</option>
+		          <option value="5">Posterior año 2000</option>
+		        </select>
+		      </div>
+		    </div>
+		    <button type="submit" class="btn btn-info">Ir al paso 2</button>
+		  </form>
+		</center>
+    
+	</section>
+
+	<section id="content4" class="tab-content">
+		<center>
+		  <form action="/getquote/productlist"   role="form" data-toggle="validator" class="quoteform">
+		    <div class="form-row">
+		      <div class="form-group col-md-6">
+		        <label for="inputName">Nombre</label>
+		        <input type="name" class="form-control" id="inputName" placeholder="Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="firstname">Nombre de pila</label>
+		        <input type="text" class="form-control" id="firstname" placeholder="First Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="lastname">Apellido</label>
+		        <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="telnumber">Número de teléfono</label>
+		        <input type="text" class="form-control" id="telnumber" placeholder="111-2222-3333" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputEmail4">Email</label>
+		        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputAddress">Dirección</label>
+		        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="zip">ZipCode</label>
+		        <input type="text" class="form-control" id="zip" required>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="family">FamilyNumber</label>
+		        <input type="number" class="form-control" id="family" required>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="carnumber">CarNumber</label>
+		        <input type="number" class="form-control" id="carnumber" required>
+		      </div>
+		    </div>
+		    <button type="submit" class="btn btn-info">Ir al paso 2</button>
+		  </form>
+		</center>
+      	
+	</section>
+
+	<section id="content5" class="tab-content">
+		<center>
+		  <form action="/getquote/productlist"  role="form" data-toggle="validator" class="quoteform">
+		    <div class="form-row">
+		      <div class="form-group col-md-6">
+		        <label for="inputName">Nombre</label>
+		        <input type="name" class="form-control" id="inputName" placeholder="Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="firstname">Nombre de pila</label>
+		        <input type="text" class="form-control" id="firstname" placeholder="First Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="lastname">Apellido</label>
+		        <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="telnumber">Número de teléfono</label>
+		        <input type="text" class="form-control" id="telnumber" placeholder="111-2222-3333" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputEmail4">Email</label>
+		        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputAddress">Dirección</label>
+		        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+		      </div>
+		    </div>
+		    <button type="submit" class="btn btn-info">Ir al paso 2</button>
+		  </form>
+		</center>
+      	
+	</section>
+
+	<section id="content6" class="tab-content">
+		<center>
+		  <form action="/getquote/productlist"   role="form" data-toggle="validator" class="quoteform">
+		    <div class="form-row">
+		      <div class="form-group col-md-6">
+		        <label for="inputName">Nombre</label>
+		        <input type="name" class="form-control" id="inputName" placeholder="Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="firstname">Nombre de pila</label>
+		        <input type="text" class="form-control" id="firstname" placeholder="First Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="lastname">Apellido</label>
+		        <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="telnumber">Número de teléfono</label>
+		        <input type="text" class="form-control" id="telnumber" placeholder="111-2222-3333" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputEmail4">Email</label>
+		        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputAddress">Dirección</label>
+		        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+		      </div>
+		    </div>
+		    <button type="submit" class="btn btn-info">Ir al paso 2</button>
+		  </form>
+		</center>
+    
+	</section>
+
+	<section id="content7" class="tab-content">
+		<center>
+		  <form action="/getquote/productlist"   role="form" data-toggle="validator" class="quoteform">
+		    <div class="form-row">
+		      <div class="form-group col-md-6">
+		        <label for="inputName">Nombre</label>
+		        <input type="name" class="form-control" id="inputName" placeholder="Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="firstname">Nombre de pila</label>
+		        <input type="text" class="form-control" id="firstname" placeholder="First Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="lastname">Apellido</label>
+		        <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="telnumber">Número de teléfono</label>
+		        <input type="text" class="form-control" id="telnumber" placeholder="111-2222-3333" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputEmail4">Email</label>
+		        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputAddress">Dirección</label>
+		        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="brand">Marca de auto</label>
+		        <select id="brand" class="form-control" required>
+		          <option selected>Choose...</option>
+		          <option>...</option>
+		          <option value="1">ACADIAN</option>
+		          <option value="2">ACURA</option>
+		          <option value="3">ALFA ROMEO</option>
+		          <option value="4">ASIA MOTORS</option>
+		          <option value="5">AUDI</option>
+		          <option value="6">BAIC</option>
+		          <option value="7">BAW</option>
+		          <option value="8">BMW</option>
+		          <option value="9">BRILLIANCE</option>
+		          <option value="10">BYD</option>
+		        </select>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="carmodel">Modelo de coche</label>
+		        <select id="carmodel" class="form-control" required>
+		          <option selected>Choose...</option>
+		          <option>...</option>
+		        </select>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="registeryear">Año de registro</label>
+		        <input type="text" class="form-control" id="registeryear" required>
+		      </div>
+		    </div>
+		    <button type="submit" class="btn btn-info">Ir al paso 2</button>
+		  </form>
+		</center>
+      	
+	</section>
+
+	<section id="content8" class="tab-content">
+		<center>
+		  <form action="/getquote/productlist" role="form" data-toggle="validator" class="quoteform">
+		    <div class="form-row">
+		      <div class="form-group col-md-6">
+		        <label for="inputName">Nombre</label>
+		        <input type="name" class="form-control" id="inputName" placeholder="Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="firstname">Nombre de pila</label>
+		        <input type="text" class="form-control" id="firstname" placeholder="First Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="lastname">Apellido</label>
+		        <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="telnumber">Número de teléfono</label>
+		        <input type="text" class="form-control" id="telnumber" placeholder="111-2222-3333" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputEmail4">Email</label>
+		        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+		      </div>
+		      <div class="form-group col-md-6">
+		        <label for="inputAddress">Dirección</label>
+		        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="brand">¿Qué tipo de propiedad es?</label>
+		        <select id="brand" class="form-control" required>
+		          <option value="" selected>Choose...</option>
+		          <option value="House">House</option>
+		          <option value="Flat / Apartment">Flat / Apartment</option>
+		          <option value="Bungalow">Bungalow</option>
+		          <option value="Town house">Town house</option>
+		          <option value="Other">Other</option>
+		        </select>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="aa">¿Qué tipo de propiedad es?</label>
+		        <select id="aa" class="form-control" required>
+		          <option value="" selected>Choose...</option>
+		          <option value="Semi-detached">Semi-detached</option>
+		          <option value="Detached">Detached</option>
+		          <option value="Link-detached">Link-detached</option>
+		          <option value="Terraced">Terraced</option>
+		          <option value="End terrace">End terrace</option>
+		        </select>
+		      </div>
+		      <div class="form-group col-md-4">
+		        <label for="bb">Roughly when was it built?</label>
+		        <select id="bb" class="form-control" required>
+		          <option value="" selected>Choose...</option>
+		          <option value="1">Antiguedad del Inmueble</option>
+		          <option value="1">Entre 1953 – 1972</option>
+		          <option value="2">Entre 1973-1988</option>
+		          <option value="3">Entre 1989-1993</option>
+		          <option value="4">Entre 1994-2000</option>
+		          <option value="5">Posterior año 2000</option>
+		        </select>
+		      </div>
+		    </div>
+		    <button type="submit" class="btn btn-info">Ir al paso 2</button>
+		  </form>
+		</center>
+      	
+	</section>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
