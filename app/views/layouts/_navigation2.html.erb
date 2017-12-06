@@ -24,36 +24,40 @@
                 <i class="fa fa-th-large"></i> <span class="nav-label">Inicio</span>
                 <% end %>
             </li>
-            <li class="<%= is_active_controller('user') %>">
-                <a href="#"><i class="fa fa-user-circle"></i> <span class="nav-label" data-i18n="nav.user">Mis datos</span></a>
-                <ul class="nav nav-second-level collapse <%= is_active_controller('user', 'in') %>">
-                    <li class="<%= is_active_action('profile') %>"><%= link_to "Perfil", user_profileworkus_path %> </li>
-                    <li class="<%= is_active_action('clients') %>"><%= link_to "Clientela", user_clientsworkus_path %> </li>
-                </ul>
-            </li>
             <li class="<%= is_active_controller('getquote') %>">
                 <%= link_to getquote_workus_path do %>
-                <i class="fa fa-diamond"></i> <span class="nav-label" data-i18n="nav.layouts">Citar</span>
+                <i class="fa fa-diamond"></i> <span class="nav-label" data-i18n="nav.layouts">Cotizatar</span>
+                <% end %>
+            </li>
+            <li class="<%= is_active_controller('user')&&is_active_action('clients') %>">
+                <%= link_to user_clientsworkus_path do %>
+                <i class="fa fa-users"></i> <span class="nav-label" data-i18n="nav.layouts">Clientes</span>
                 <% end %>
             </li>
             <li class="<%= is_active_controller('saleshistory') %>">
                 <%= link_to saleshistory_workus_path do %>
-                <i class="fa fa-bar-chart-o"></i> <span class="nav-label" data-i18n="nav.layouts">Estadísticas de ventas</span>
+                <i class="fa fa-bar-chart-o"></i> <span class="nav-label" data-i18n="nav.layouts">Historial de Ventas y Pólizas</span>
                 <% end %>
             </li>
             <li class="<%= is_active_controller('endorsement') %>">
                 <%= link_to endorsement_workus_path do %>
-                <i class="fa fa-thumbs-o-up"></i> <span class="nav-label" data-i18n="nav.layouts">Aprobación</span>
+                <i class="fa fa-thumbs-o-up"></i> <span class="nav-label" data-i18n="nav.layouts">Registro de Endosos </span>
                 <% end %>
             </li>
             <li class="<%= is_active_controller('claim') %>">
                 <%= link_to claim_workus_path do %>
-                <i class="fa fa-paper-plane-o"></i> <span class="nav-label" data-i18n="nav.layouts">Reclamaciones</span>
+                <i class="fa fa-paper-plane-o"></i> <span class="nav-label" data-i18n="nav.layouts">Registro de Siniestros </span>
                 <% end %>
             </li>
             <li class="<%= is_active_controller('commission') %>">
                 <%= link_to commission_workus_path do %>
                 <i class="fa fa-newspaper-o"></i> <span class="nav-label" data-i18n="nav.layouts">Comisiones</span>
+                <% end %>
+            </li>
+            
+            <li class="<%= is_active_controller('user')&&is_active_action('profile') %>">
+                <%= link_to user_profileworkus_path do %>
+                <i class="fa fa-user-circle"></i> <span class="nav-label" data-i18n="nav.layouts">Mis datos</span>
                 <% end %>
             </li>
         </ul>

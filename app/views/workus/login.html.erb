@@ -23,15 +23,17 @@
             <div class="ibox-content">
                 <form class="m-t" role="form" action="/dashboard/workus">
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Username" required="">
+                        <input type="text" class="form-control" placeholder="RUT Empresa" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="RUT Trabajador" required="">
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control" placeholder="Password" required="">
                     </div>
                     <button type="submit" class="btn btn-primary block full-width m-b">Entrar</button>
-                    <a href="#"><small>Forgot password?</small></a>
-                    <p class="text-muted text-center"><small>Do not have an account?</small></p>
-                    <a class="btn btn-sm btn-white btn-block" href="<%= url_for :controller => 'user', :action => 'register' %>">Create an account</a>
+                    <a href="/user/forgot_password"><small>Se te olvidó tu contraseña?</small></a>
+                    
                 </form>
                 <p class="m-t">
                     <small>Espacio Seguro &copy; 2017</small>

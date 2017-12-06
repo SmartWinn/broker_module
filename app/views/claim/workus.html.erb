@@ -39,14 +39,14 @@
 </style>
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
-        <h2>Reclamaciones de registro</h2>
+        <h2>Registro de Siniestros</h2>
 
             <ol class="breadcrumb">
                 <li>
                     <a href="<%= url_for :controller => 'dashboard', :action => 'index' %>">Inicio</a>
             </li>
             <li class="active">
-                <strong><a>Reclamaciones</a></strong>
+                <strong><a>Siniestros</a></strong>
             </li>
         </ol>
     </div>
@@ -93,9 +93,9 @@
     <tr>
         <th>RUT</th>
         <th>Empresa</th>
-        <th>Numero de reclamo</th>
-        <th>Número de contrato</th>
-        <th>Fecha de aplicacion</th>
+        <th>Nº de Siniestro</th>
+        <th>Nª Contrato</th>
+        <th>Fecha Solicitud</th>
     </tr>
 </thead>
 <tbody>
@@ -181,9 +181,9 @@
     <tr>
         <th>RUT</th>
         <th>Empresa</th>
-        <th>Numero de reclamo</th>
-        <th>Número de contrato</th>
-        <th>Fecha de aplicacion</th>
+        <th>Nº de Siniestro</th>
+        <th>Nª Contrato</th>
+        <th>Fecha Solicitud</th>
     </tr>
 </tfoot>
 </table>
@@ -203,15 +203,15 @@
                 <div class="row">
                     <div class="form-group col-md-12">
                         <div class="col-md-6">
-                            <label>Numero de reclamo</label>
+                            <label>Nº de Denuncio</label>
+                            <input class="form-control" type="number" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Nª de Contrato</label>
                             <input class="form-control" type="number">
                         </div>
                         <div class="col-md-6">
-                            <label>Número de contrato</label>
-                            <input class="form-control" type="number">
-                        </div>
-                        <div class="col-md-6">
-                            <label>Seleccionar Empresa</label>
+                            <label>Compañía</label>
                             <select class="form-control">
                                 <option value="">Choose...</option>
                                 <option value="Liberty">Liberty</option>
@@ -225,19 +225,7 @@
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <label>Número de contrato</label>
-                            <input class="form-control form-control-inline" type="text" value="" />
-                        </div>
-                        <div class="col-md-12">
-                            <label>Seleccionar período</label>
-                            <div class="input-group date-picker input-daterange" data-date="10/11/2012" data-date-format="mm/dd/yyyy">
-                                <input type="text" class="form-control" name="from">
-                                <span class="input-group-addon"> to </span>
-                                <input type="text" class="form-control" name="to">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label>Seleccione el tipo de endoso</label>
+                            <label>Tipo de Seguro</label>
                             <select class="form-control">
                                 <option value="">Choose...</option>
                                 <option>Annulment</option>
@@ -254,37 +242,8 @@
                                 <option>Other</option>
                             </select>
                         </div>
-                        <div class="col-md-6">
-                            <label>Estado</label>
-                            <select class="form-control">
-                                <option value="">Choose...</option>
-                                <option>Pedido</option>
-                                <option>Aceptado</option>
-                                <option>Rechazado</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label>Nombre ejecutivo</label>
-                            <input class="form-control form-control-inline" type="text" value="" />
-                        </div>
-                        <div class="col-md-6">
-                            <label>Correo electrónico ejecutivo</label>
-                            <input class="form-control form-control-inline" type="text" value="" />
-                        </div>
                         <div class="col-md-12">
-                            <label>Ramo</label>
-                            <select class="bs-select form-control" multiple>
-                                <option>Automotor</option>
-                                <option>Hogar</option>
-                                <option>Negocio</option>
-                                <option>Transporte terrestre</option>
-                                <option>Responsabilidad civil</option>
-                                <option>Responsabilidad civil</option>
-                                <option>Otras ramas</option>
-                            </select>
-                        </div>
-                        <div class="col-md-12">
-                            <label>Detalle del endoso</label>
+                            <label>Detalle de Siniestro</label>
                             <textarea class="form-control autosizeme" rows="6"></textarea>
                         </div>
                     </div>
@@ -292,6 +251,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn dark btn-outline" data-dismiss="modal">Cerca</button>
+                <button type="button" class="btn dark btn-outline" data-dismiss="modal">Descargar Siniestro en PDF</button>
                 <button type="button" class="btn green">Submit</button>
             </div>
         </div>
