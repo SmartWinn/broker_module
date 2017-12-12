@@ -39,7 +39,7 @@
 </style>
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
-        <h2>Endosos de registro</h2>
+        <h2>Registro de Endosos</h2>
 
             <ol class="breadcrumb">
                 <li>
@@ -82,6 +82,75 @@
     </div>
 </div>
 <div class="ibox-content">
+<div class="row">
+    <div class="col-sm-2 m-b-xs">
+        <h5>Seleccione el tipo de productos</h5>
+        <select class="input-sm form-control input-s-sm inline">
+            <option ></option>
+            <option value="0">Automotriz</option>
+            <option value="1">Viaje</option>
+            <option value="2">RCP</option>
+            <option value="3">Hogar</option>
+            <option value="4">SOAP</option>
+            <option value="5">Vida</option>
+            <option value="6">Motor</option>
+            <option value="7">Condominio</option>
+        </select>
+    </div>
+    <div class="col-sm-2 m-b-xs">
+        <h5>Seleccionar empresa</h5>
+        <select class="input-sm form-control input-s-sm inline">
+            <option ></option>
+            <option value="0">Liberty</option>
+            <option value="1">Mapre</option>
+            <option value="2">HDI Seguros</option>
+            <option value="3">BCI Insurance</option>
+            <option value="4">Chilean Consolidated</option>
+            <option value="5">Consortium</option>
+            <option value="6">Zenit Seguros</option>
+            <option value="7">Seguros SURA</option>
+        </select>
+    </div>
+    <div class="col-sm-2 m-b-xs">
+        <h5>Seleccione mes</h5>
+        <select class="input-sm form-control input-s-sm inline">
+            <option ></option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+    </div>
+    <div class="col-sm-2 m-b-xs">
+        <h5>Seleccionar año</h5>
+        <select class="input-sm form-control input-s-sm inline">
+            <option ></option>
+            <option value="0">2017</option>
+            <option value="1">2016</option>
+            <option value="2">2015</option>
+            <option value="3">2014</option>
+            <option value="4">2013</option>
+            <option value="5">2012</option>
+            <option value="6">2011</option>
+            <option value="7">2010</option>
+        </select>
+    </div>
+    <div class="col-sm-2 m-b-xs">
+        <h5>&nbsp</h5>
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline btn-sm btn-default">Enviar</button>
+        </div>
+    </div>
+</div>
+<div class="ibox-content">
     <div class="row">
         <div class="col-sm-5 m-b-xs">
             <button type="button" class="btn btn-w-m btn-info" data-toggle="modal" href="#new_endorsement_form">Añadir endoso</button>
@@ -97,7 +166,7 @@
         <th>RUT</th>
         <th>Compañía</th>
         <th>Nº de Endoso</th>
-        <th>Nª Contrato</th>
+        <th>Número de Póliza</th>
         <th>Fecha Solicitud</th>
     </tr>
 </thead>
@@ -221,7 +290,7 @@
         <th>RUT</th>
         <th>Compañía</th>
         <th>Nº de Endoso</th>
-        <th>Nª Contrato</th>
+        <th>Número de Póliza</th>
         <th>Fecha Solicitud</th>
     </tr>
 </tfoot>
@@ -252,9 +321,9 @@
                             <input class="form-control" type="number">
                         </div>
                         <div class="col-md-6">
-                            <label>Seleccionar empresa</label>
+                            <label>Seleccionar Compañía</label>
                             <select class="form-control">
-                                <option value="">Choose...</option>
+                                <option value=""></option>
                                 <option value="Liberty">Liberty</option>
                                 <option value="Mapre">Mapre</option>
                                 <option value="HDI Seguros">HDI Seguros</option>
@@ -276,26 +345,26 @@
                         <div class="col-md-6">
                             <label>Seleccione el tipo de endoso</label>
                             <select class="form-control">
-                                <option value="">Choose...</option>
-                                <option>Annulment</option>
-                                <option>Cancellation</option>
-                                <option>Extension</option>
-                                <option>Rehabilitation</option>
-                                <option>Entering drive or location</option>
-                                <option>ITEM rules for</option>
-                                <option>Hedge modification</option>
-                                <option>Inclusion of matter insured</option>
-                                <option>Change insured</option>
-                                <option>Including minuta</option>
-                                <option>Inspection</option>
-                                <option>Other</option>
+                                <option value=""></option>
+                                <option>Anulación </option>
+                                <option>Cancelación </option>
+                                <option>Extensión </option>
+                                <option>Rehabilitación </option>
+                                <option>Introducir unidad o ubicación </option>
+                                <option>Reglas de ITEM para </option>
+                                <option>Modificación de cobertura </option>
+                                <option>Inclusión de la materia asegurada </option>
+                                <option>Cambiar asegurado </option>
+                                <option>Incluyendo minuta </option>
+                                <option>Inspección </option>
+                                <option>Otro </option>
                             </select>
                         </div>
                         <div class="col-md-6">
                             <label>Estado</label>
                             <select class="form-control">
-                                <option value="">Choose...</option>
-                                <option>Pedido</option>
+                                <option value=""></option>
+                                <option>Solicitado</option>
                                 <option>Aceptado</option>
                                 <option>Rechazado</option>
                             </select>
@@ -309,7 +378,7 @@
                             <input class="form-control form-control-inline" type="text" value="" />
                         </div>
                         <div class="col-md-12">
-                            <label>Tipos de Endosos y Estados</label>
+                            <label>Ramo y los resultados</label>
                             <select class="bs-select form-control" multiple>
                                 <option>Automotor</option>
                                 <option>Hogar</option>
@@ -372,7 +441,7 @@ $(function() {
     });
 
     $('#DataTables_Table_0_filter label').html('<label>Buscar:<input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0"></label>');
-
+    
     $('.date-picker').datepicker();
 });
 

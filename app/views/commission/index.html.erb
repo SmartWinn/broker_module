@@ -224,7 +224,7 @@
 </div>
 
 <% content_for :javascript do %>
-
+<script type="text/javascript" src="/assets/javascripts/const.js"></script>
 <script type="text/javascript">
 
 
@@ -239,8 +239,60 @@ $(function() {
             { extend: 'copy'},
             {extend: 'csv'},
             {extend: 'excel', title: 'ExampleFile'},
-            {extend: 'pdf', title: 'ExampleFile'},
-
+            {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                customize: function ( doc ) {
+                    var now = new Date();
+                    var jsDate = now.getDate()+'-'+(now.getMonth()+1)+'-'+now.getFullYear();
+                    doc.content.splice( 1, 0, {
+                        margin: [ 0, 0, 0, 12 ],
+                        alignment: 'center',
+                        image: logo
+                    },
+                    {
+                        text: "Date: " + jsDate,
+                        alignment: 'left'
+                    },
+                    {
+                        text: "Corredor: Corredora De Seguros Espacioseguro Spa",
+                        alignment: 'left'
+                    },
+                    {
+                        text: "RUT: 76639414-0",
+                        alignment: 'left'
+                    },
+                    {
+                        text: "Tributacion: IVA",
+                        alignment: 'left'
+                    },
+                    {
+                        text: "Sucursal: SANTIAGO",
+                        alignment: 'left'
+                    } );
+                    doc['footer']=(function(page, pages) {
+                        return {
+                            columns: [
+                                'This is your left footer column',
+                                {
+                                    // This is the right column
+                                    alignment: 'right',
+                                    text: ['page ', { text: page.toString() },  ' of ', { text: pages.toString() }]
+                                }
+                            ],
+                            margin: [10, 0]
+                        }
+                    });
+                    var objLayout = {};
+                    objLayout['hLineWidth'] = function(i) { return .5; };
+                    objLayout['vLineWidth'] = function(i) { return .5; };
+                    objLayout['hLineColor'] = function(i) { return '#aaa'; };
+                    objLayout['vLineColor'] = function(i) { return '#aaa'; };
+                    objLayout['paddingLeft'] = function(i) { return 4; };
+                    objLayout['paddingRight'] = function(i) { return 4; };
+                    doc.content[0].layout = objLayout;
+                }
+            },
             {extend: 'print',
                 customize: function (win){
                     $(win.document.body).addClass('white-bg');
