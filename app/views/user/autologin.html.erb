@@ -10,18 +10,15 @@
         <p>Login in. To see it in action.</p>
         <form class="m-t" role="form" action="/dashboard/index">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="RUT" required="">
+                <input type="text" class="form-control" placeholder="RUT Empresa" required="">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" required="">
+                <input type="text" class="form-control" placeholder="RUT Trabajador" required="">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Contraseña" required="">
             </div>
             <button type="submit" class="btn btn-primary block full-width m-b">Entrar</button>
-            <button class="btn btn-primary block full-width m-b" id="workus">Trabaja con nosotros</button>
-            <script type="text/javascript">
-                $('#workus').on('click', function() {
-                    window.location.href = "/workus/login";
-                });
-            </script>
             <a href="/user/forgot_password"><small>Se te olvidó tu contraseña?</small></a>
         </form>
         <p class="m-t"> <small>Espacio Seguro &copy; 2017</small> </p>

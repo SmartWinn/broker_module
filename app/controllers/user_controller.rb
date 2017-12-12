@@ -12,6 +12,10 @@ class UserController < ApplicationController
 		render :layout => "workus"
 	end
 
+	def autologin
+		render :layout => "empty"
+	end
+
 	def profileworkus
 		render :layout => "workus"
 	end
@@ -31,4 +35,5 @@ class UserController < ApplicationController
 	def workus
 		render :layout => "workus"
 	end
+
 end

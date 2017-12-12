@@ -12,6 +12,7 @@ get "dashboard/workus"
 
 get "user/clients"
 get "user/login"
+get "user/autologin"
 get "user/profile"
 get "user/register"
 get "user/forgot_password"
